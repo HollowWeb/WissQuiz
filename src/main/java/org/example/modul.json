@@ -1,0 +1,19 @@
+{
+  "name": "Modul 12",
+  "fragen": [
+    "Test Frage",
+    "Test Frage2",
+    "Test Frage3"
+  ],
+  "antworten": [
+    "Ja2 Nein1 Ja Nein",
+    "Nein1 Ja2 Nein Ja",
+    "M O N P"
+  ],
+  "richtigeAntworten": [
+    "Ja2",
+    "Nein",
+    "P"
+  ]
+
+}
