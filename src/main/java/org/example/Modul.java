@@ -11,6 +11,7 @@ public class Modul {
     public Modul(){
 
     }
+    // fick dich in arsh
 
     public String getName() {
         return name;
