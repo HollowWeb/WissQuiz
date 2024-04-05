@@ -3,17 +3,18 @@
   "fragen": [
     "Test Frage",
     "Test Frage2",
-    "Test Frage3"
+    "Test Frage3",
+    "Test Frage4"
   ],
   "antworten": [
-    "Ja2 Nein1 Ja Nein",
-    "Nein1 Ja2 Nein Ja",
-    "M O N P"
+    "Ja2 |Nein1 |Ja |Nein ",
+    "Nein1 |Ja2 |Nein |Ja ",
+    "M |O |N |P "
   ],
   "richtigeAntworten": [
-    "Ja2",
-    "Nein",
-    "P"
+    "Ja2 ",
+    "Nein ",
+    "P "
   ]
 
 }

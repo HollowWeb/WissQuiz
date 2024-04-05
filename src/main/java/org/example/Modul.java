@@ -10,11 +10,10 @@ public class Modul {
 
     public Modul(){
 
+
     }
 
-    public String getName() {
-        return name;
-    }
+
 
     public List<String> getFragen() {
         return fragen;
@@ -26,5 +25,9 @@ public class Modul {
 
     public List<String> getRichtigeAntworten() {
         return richtigeAntworten;
+    }
+
+    public int getNumberOfQuestions(){
+        return fragen.size() - 1;
     }
 }
