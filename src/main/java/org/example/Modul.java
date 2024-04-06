@@ -12,8 +12,6 @@ public class Modul {
 
 
     }
-    // fick dich in arsh
-
 
 
     public List<String> getFragen() {

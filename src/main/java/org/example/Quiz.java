@@ -58,6 +58,7 @@ public class Quiz {
         }
         System.out.println(i);
         List<String> antwortenListe  = new ArrayList<>(List.of(antworten.get(i).split("\\|")));
+
         Collections.shuffle(antwortenListe);
         return antwortenListe;
 

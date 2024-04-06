@@ -13,16 +13,22 @@ public class QuizWindow extends JFrame {
     private JLabel questionLabel;
     private JButton[] answerButtons = new JButton[4];
     private JLabel scoreLabel;
+    private QuizSelectionWindow quizSelectionWindow;
 
-    public QuizWindow(Quiz quiz) {
+    public QuizWindow(Quiz quiz, QuizSelectionWindow quizSelectionWindow) {
         this.quiz = quiz;
+        this.quizSelectionWindow = quizSelectionWindow;
+
         initializeUI();
+
     }
 
     private void initializeUI() {
         setTitle("Quiz App");
-        setSize(400, 300);
+        setSize(600, 600);
         setLayout(new BorderLayout());
+        setLocationRelativeTo(null);
+
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         questionLabel = new JLabel("Question", SwingConstants.CENTER);
@@ -59,7 +65,7 @@ public class QuizWindow extends JFrame {
     }
 
     private void answerButtonClicked(ActionEvent e) {
-        if (QuizBrain.hasQuestions(quiz)){
+        if (quiz.getQuestionNumber() < quiz.getNumberOfQuestions()){
             JButton clickedButton = (JButton) e.getSource();
             String selectedAnswer = clickedButton.getText();
             String correctAnswer = quiz.getRichtigeAntwort(quiz.getQuestionNumber());
@@ -73,12 +79,16 @@ public class QuizWindow extends JFrame {
             quiz.nextQuestion(); // This method should be implemented in Quiz class to update questionNumber
             loadQuestion();
             updateScoreLabel();
+            if (!(quiz.getQuestionNumber() < quiz.getNumberOfQuestions())){
+                JOptionPane.showMessageDialog(this, "Quiz finished! Your score: " + quiz.getScore());
+                //System.exit(0);
+                setVisible(false);
+                dispose();
+                this.quizSelectionWindow.setVisible(true);
+            }
 
         }
-        else {
-            JOptionPane.showMessageDialog(this, "Quiz finished! Your score: " + quiz.getScore());
-            System.exit(0);
-        }
+
     }
 
     private void updateScoreLabel() {
@@ -89,7 +99,7 @@ public class QuizWindow extends JFrame {
         // Example usage
 
         Quiz quiz = new Quiz("modul.json"); // moduleName should be replaced with actual module name
-        SwingUtilities.invokeLater(() -> new QuizWindow(quiz).setVisible(true));
+        //SwingUtilities.invokeLater(() -> new QuizWindow(quiz, QuizSelectionWindow()).setVisible(true));
     }
 }
 
