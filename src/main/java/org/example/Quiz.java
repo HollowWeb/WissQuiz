@@ -10,26 +10,27 @@ import java.util.List;
 
 public class Quiz {
     private final List<String> fragen;
-
     private final List<String> antworten;
-
     private final List<String> richtigeAntworten;
-
     private final Modul jsonArray;
+    private final Person person;
+    private final String modul;
     private int score;
-
     private final int numberOfQuestions;
     private int questionNumber;
 
-    public Quiz(String modul) throws FileNotFoundException {
+    public Quiz(String modul, Person person) throws FileNotFoundException {
         Gson gson = new Gson();
-        this.jsonArray = gson.fromJson(new FileReader("src/main/java/org/example/"+modul), Modul.class);
+        this.modul = modul;
+        this.jsonArray = gson.fromJson(new FileReader("src/main/java/org/example/"+modul+".json"), Modul.class);
         this.fragen = initFragen();
         this.antworten = initAntworten();
         this.richtigeAntworten = initRichtigeAntworten();
         this.score = 0;
         this.numberOfQuestions = initNumberOfQuestions();
         this.questionNumber = 0;
+        this.person = person;
+
     }
 
     private List<String> initFragen(){
@@ -90,4 +91,11 @@ public class Quiz {
         }
     }
 
+    public Person getPerson() {
+        return person;
+    }
+
+    public String getModul() {
+        return modul;
+    }
 }

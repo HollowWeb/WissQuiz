@@ -10,6 +10,7 @@ import java.util.List;
 
 public class QuizWindow extends JFrame {
     private final Quiz quiz;
+    private final Person person;
     private JLabel questionLabel;
     private JButton[] answerButtons = new JButton[4];
     private JLabel scoreLabel;
@@ -18,12 +19,12 @@ public class QuizWindow extends JFrame {
     public QuizWindow(Quiz quiz, QuizSelectionWindow quizSelectionWindow) {
         this.quiz = quiz;
         this.quizSelectionWindow = quizSelectionWindow;
-
-        initializeUI();
+        this.person = quiz.getPerson();
+        initializeUI(person);
 
     }
 
-    private void initializeUI() {
+    private void initializeUI(Person person) {
         setTitle("Quiz App");
         setSize(600, 600);
         setLayout(new BorderLayout());
@@ -69,7 +70,8 @@ public class QuizWindow extends JFrame {
             JButton clickedButton = (JButton) e.getSource();
             String selectedAnswer = clickedButton.getText();
             String correctAnswer = quiz.getRichtigeAntwort(quiz.getQuestionNumber());
-
+            System.out.println(selectedAnswer);
+            System.out.println(correctAnswer);
 
             if (selectedAnswer.equals(correctAnswer)) {
                 quiz.addScore();
@@ -81,7 +83,8 @@ public class QuizWindow extends JFrame {
             updateScoreLabel();
             if (!(quiz.getQuestionNumber() < quiz.getNumberOfQuestions())){
                 JOptionPane.showMessageDialog(this, "Quiz finished! Your score: " + quiz.getScore());
-                //System.exit(0);
+                person.setScore(quiz.getModul(), quiz.getScore());
+                JsonWriterReader.writeToJsonFile(person);
                 setVisible(false);
                 dispose();
                 this.quizSelectionWindow.setVisible(true);
@@ -94,12 +97,12 @@ public class QuizWindow extends JFrame {
     private void updateScoreLabel() {
         scoreLabel.setText("Score: " + quiz.getScore());
     }
-
+/*
     public static void main(String[] args) throws FileNotFoundException {
         // Example usage
 
-        Quiz quiz = new Quiz("modul.json"); // moduleName should be replaced with actual module name
+        Quiz quiz = new Quiz("Modul122.json"); // moduleName should be replaced with actual module name
         //SwingUtilities.invokeLater(() -> new QuizWindow(quiz, QuizSelectionWindow()).setVisible(true));
-    }
+    }*/
 }
 

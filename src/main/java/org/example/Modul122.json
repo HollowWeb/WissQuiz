@@ -7,9 +7,9 @@
     "Test Frage4"
   ],
   "antworten": [
-    "Ja2 |Nein1 |Ja |Nein ",
-    "Nein1 |Ja2 |Nein |Ja ",
-    "M |O |N |P "
+    "Ja2|Nein1|Ja|Nein",
+    "Nein1|Ja2|Nein|Ja",
+    "M|O|N|P"
   ],
   "richtigeAntworten": [
     "Ja2",
