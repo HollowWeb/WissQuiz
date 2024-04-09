@@ -3,7 +3,7 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileNotFoundException;
-import java.util.Objects;
+
 
 public class QuizSelectionWindow extends JFrame {
     public QuizSelectionWindow(Person person) {

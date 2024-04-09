@@ -5,7 +5,6 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public class QuizWindow extends JFrame {
@@ -20,11 +19,11 @@ public class QuizWindow extends JFrame {
         this.quiz = quiz;
         this.quizSelectionWindow = quizSelectionWindow;
         this.person = quiz.getPerson();
-        initializeUI(person);
+        initializeUI();
 
     }
 
-    private void initializeUI(Person person) {
+    private void initializeUI() {
         setTitle("Quiz App");
         setSize(600, 600);
         setLayout(new BorderLayout());
