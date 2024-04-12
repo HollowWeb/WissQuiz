@@ -47,7 +47,6 @@ public class QuizWindow extends JFrame {
             final int idx = i;
             answerButtons[i] = new JButton("Answer " + (i + 1));
             answerButtons[i].setFocusPainted(false);
-
             answerButtons[i].setFont(new Font("Serif", Font.PLAIN, 14));
             answerButtons[i].addActionListener(this::answerButtonClicked);
             answersPanel.add(answerButtons[i]);

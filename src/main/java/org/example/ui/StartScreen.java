@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class StartScreen extends JFrame {
+public class StartScreen extends JFrame implements Runnable{
 
     public StartScreen() {
         super("Start Screen");
@@ -59,6 +59,11 @@ public class StartScreen extends JFrame {
     }
 
     public static void main(String[] args) {
+        new StartScreen();
+    }
+
+    @Override
+    public void run() {
         new StartScreen();
     }
 }

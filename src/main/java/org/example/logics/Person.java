@@ -42,7 +42,7 @@ public class Person {
             defScores.put("Modul117", 0);
             defScores.put("Modul293", 0);
             defScores.put("Modul320", 0);
-            defScores.put("Modul127", 0);
+            defScores.put("Modul106", 0);
             return defScores;
         } else {return scores;}
     }

@@ -1,15 +1,15 @@
 [{
-    "firstName": "1345",
-    "lastName": "2456",
+    "firstName": "das",
+    "lastName": "dsa",
     "password": "1234",
     "scores": {
         "Modul347": 0,
-        "Modul127": 0,
         "Modul117": 0,
-        "Modul320": 7,
+        "Modul106": 0,
+        "Modul320": 2,
         "Modul293": 0,
-        "Modul114": 5
+        "Modul114": 0
     },
     "userName": "test",
-    "email": "12354"
+    "email": "dsa"
 }]

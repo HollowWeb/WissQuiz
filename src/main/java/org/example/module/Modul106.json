@@ -1,0 +1,42 @@
+{
+  "name": "Modul 106",
+  "fragen": [
+    "Was bedeutet SQL?",
+    "Wie fragt man Daten aus einer Tabelle ab?",
+    "Was ist der Unterschied zwischen 'WHERE' und 'HAVING' in SQL?",
+    "Wie fügt man einen Datensatz in eine Tabelle ein?",
+    "Wie aktualisiert man einen Datensatz in einer Tabelle?",
+    "Wie löscht man einen Datensatz aus einer Tabelle?",
+    "Was versteht man unter einer 'Join' Operation in SQL?",
+    "Was ist der Unterschied zwischen 'INNER JOIN' und 'LEFT JOIN'?",
+    "Wie erstellt man eine neue Tabelle mit SQL?",
+    "Wie kann man die Anzahl der Zeilen in einer Tabelle bestimmen?",
+    ""
+  ],
+  "antworten": [
+    "Structured Query Language, eine Sprache zur Verwaltung und Abfrage von relationalen Datenbanken.|Eine Programmiersprache für statistische Analysen.|Ein Tool zur Datenvisualisierung.|Ein Datenbankmanagementsystem.",
+    "SELECT * FROM Tabelle;|INSERT INTO Tabelle VALUES ('Daten');|UPDATE Tabelle SET Spalte = 'Wert';|DELETE FROM Tabelle;",
+    "'WHERE' filtert Zeilen vor Gruppierung, 'HAVING' danach.|'WHERE' und 'HAVING' können synonym verwendet werden.|'WHERE' ist für temporäre Tabellen, 'HAVING' für permanente.|Es gibt keinen Unterschied.",
+    "INSERT INTO Tabelle (Spalte1, Spalte2) VALUES (Wert1, Wert2);|INSERT DATA INTO Tabelle VALUES (Wert1, Wert2);|CREATE Tabelle VALUES (Wert1, Wert2);|APPEND INTO Tabelle (Wert1, Wert2);",
+    "UPDATE Tabelle SET Spalte = 'neuer Wert' WHERE Bedingung;|MODIFY Tabelle SET Spalte = 'neuer Wert';|CHANGE Tabelle Spalte 'neuer Wert';|RENEW Tabelle SET Spalte = 'neuer Wert';",
+    "DELETE FROM Tabelle WHERE Bedingung;|REMOVE FROM Tabelle WHERE Bedingung;|DROP FROM Tabelle WHERE Bedingung;|ERASE FROM Tabelle WHERE Bedingung;",
+    "Verbindet Zeilen aus zwei oder mehr Tabellen, basierend auf einer verwandten Spalte.|Ein Befehl zum Löschen von Tabellen.|Eine Funktion zur Datenverschlüsselung.|Ein Befehl, um Daten in eine Tabelle einzufügen.",
+    "'INNER JOIN' gibt nur übereinstimmende Zeilen in beiden Tabellen, 'LEFT JOIN' gibt alle Zeilen aus der linken Tabelle und die übereinstimmenden aus der rechten.|'LEFT JOIN' ist schneller als 'INNER JOIN'.|'INNER JOIN' verwendet mehr Speicher als 'LEFT JOIN'.|Es gibt keinen Unterschied.",
+    "CREATE TABLE NeueTabelle (Spalte1 Typ1, Spalte2 Typ2);|CREATE DATABASE NeueTabelle;|MAKE TABLE NeueTabelle;|NEW TABLE NeueTabelle;",
+    "SELECT COUNT(*) FROM Tabelle;|COUNT ROWS IN Tabelle;|SELECT ROWS FROM Tabelle;|GET COUNT OF Tabelle;",
+    ""
+  ],
+  "richtigeAntworten": [
+    "Structured Query Language, eine Sprache zur Verwaltung und Abfrage von relationalen Datenbanken.",
+    "SELECT * FROM Tabelle;",
+    "'WHERE' filtert Zeilen vor Gruppierung, 'HAVING' danach.",
+    "INSERT INTO Tabelle (Spalte1, Spalte2) VALUES (Wert1, Wert2);",
+    "UPDATE Tabelle SET Spalte = 'neuer Wert' WHERE Bedingung;",
+    "DELETE FROM Tabelle WHERE Bedingung;",
+    "Verbindet Zeilen aus zwei oder mehr Tabellen, basierend auf einer verwandten Spalte.",
+    "'INNER JOIN' gibt nur übereinstimmende Zeilen in beiden Tabellen, 'LEFT JOIN' gibt alle Zeilen aus der linken Tabelle und die übereinstimmenden aus der rechten.",
+    "CREATE TABLE NeueTabelle (Spalte1 Typ1, Spalte2 Typ2);",
+    "SELECT COUNT(*) FROM Tabelle;",
+    ""
+  ]
+}

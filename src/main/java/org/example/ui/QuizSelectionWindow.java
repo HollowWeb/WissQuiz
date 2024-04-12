@@ -27,8 +27,7 @@ public class QuizSelectionWindow extends JFrame {
                 {"Modul 117", "Modul117"}, // noch zu machen
                 {"Modul 293", "Modul293"},
                 {"Modul 320", "Modul320"},
-
-                {"Modul 236", "modul236"}
+                {"Modul 106", "Modul106"}
         };
 
         for (String[] module : modules) {
