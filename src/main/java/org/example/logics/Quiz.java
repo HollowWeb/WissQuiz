@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logics;
 
 import com.google.gson.Gson;
 
@@ -22,7 +22,7 @@ public class Quiz {
     public Quiz(String modul, Person person) throws FileNotFoundException {
         Gson gson = new Gson();
         this.modul = modul;
-        this.jsonArray = gson.fromJson(new FileReader("src/main/java/org/example/"+modul+".json"), Modul.class);
+        this.jsonArray = gson.fromJson(new FileReader("src/main/java/org/example/module/"+modul+".json"), Modul.class);
         this.fragen = initFragen();
         this.antworten = initAntworten();
         this.richtigeAntworten = initRichtigeAntworten();
@@ -57,7 +57,7 @@ public class Quiz {
         if (!QuizBrain.hasQuestions(this)){
            return null;
         }
-        System.out.println(i);
+
         List<String> antwortenListe  = new ArrayList<>(List.of(antworten.get(i).split("\\|")));
 
         Collections.shuffle(antwortenListe);

@@ -1,0 +1,42 @@
+{
+  "name": "Modul 293",
+  "fragen": [
+    "Was bestimmt die z-index-Eigenschaft in CSS?",
+    "Welche CSS-Eigenschaft wird verwendet, um die Textfarbe eines Elements zu ändern?",
+    "Wie fügt man in CSS einen Kommentar hinzu?",
+    "Was ist der Zweck des <title>-Tags in HTML?",
+    "Welches Tag wird für die Erstellung einer ungeordneten Liste in HTML verwendet?",
+    "Wie bindet man ein Bild in eine HTML-Seite ein?",
+    "Welches Gesetz regelt in der Europäischen Union den Datenschutz?",
+    "Was versteht man unter Datenminimierung im Datenschutz?",
+    "Was kennzeichnet eine Datenpanne (Data Breach)?",
+    "Was ist ein Cookie im Kontext des Internets?",
+    ""
+  ],
+  "antworten": [
+    "Die Transparenz eines Elements|Die Reihenfolge, in der Elemente übereinander gestapelt werden|Die horizontale Ausrichtung eines Elements|Die Breite eines Elements",
+    "text-color|color|font-color|background-color",
+    "// Dies ist ein Kommentar|<!-- Dies ist ein Kommentar -->|/* Dies ist ein Kommentar */|# Dies ist ein Kommentar",
+    "Einen Kommentar im Code zu hinterlassen|Den Titel der Webseite im Browser-Tab anzuzeigen|Eine Überschrift innerhalb der Webseite zu erstellen|Den Titel eines Artikels zu definieren",
+    "<ol>|<ul>|<li>|<dl>",
+    "<img src=\"bild.jpg\">|<image href=\"bild.jpg\">|<img href=\"bild.jpg\">|<image src=\"bild.jpg\">",
+    "GDPR (General Data Protection Regulation)|CCPA (California Consumer Privacy Act)|PIPEDA (Personal Information Protection and Electronic Documents Act)|HIPAA (Health Insurance Portability and Accountability Act)",
+    "Speichern von maximalen Datenmengen für Statistiken|Erhebung und Speicherung nur der notwendigsten personenbezogenen Daten|Minimale Sicherheitsmaßnahmen für gespeicherte Daten|Reduzierung der Datenübertragungsgeschwindigkeit",
+    "Eine erfolgreiche Datenverschlüsselung|Ein unautorisiertes Eindringen in ein Datensystem|Die sichere Übertragung von Daten über das Internet|Die regelmäßige Aktualisierung von Datenschutzrichtlinien",
+    "Ein kleines Datenpaket, das vom Server an den Browser gesendet wird|Ein Programm zur Datenverschlüsselung|Eine Methode zum schnellen Löschen von Browserdaten|Eine Fehlermeldung, die beim Laden von Webseiten auftritt",
+    ""
+  ],
+  "richtigeAntworten": [
+    "Die Reihenfolge, in der Elemente übereinander gestapelt werden",
+    "color",
+    "/* Dies ist ein Kommentar */",
+    "Den Titel der Webseite im Browser-Tab anzuzeigen",
+    "<ul>",
+    "<img src=\"bild.jpg\">",
+    "GDPR (General Data Protection Regulation)",
+    "Erhebung und Speicherung nur der notwendigsten personenbezogenen Daten",
+    "Ein unautorisiertes Eindringen in ein Datensystem",
+    "Ein kleines Datenpaket, das vom Server an den Browser gesendet wird",
+    ""
+  ]
+}

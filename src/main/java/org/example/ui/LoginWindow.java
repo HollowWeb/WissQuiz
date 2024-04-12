@@ -1,4 +1,7 @@
-package org.example;
+package org.example.ui;
+import org.example.logics.JsonWriterReader;
+import org.example.logics.Person;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -40,13 +43,13 @@ public class LoginWindow extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Placeholder for login logic
+
                 try {
                     StringBuilder password = new StringBuilder();
                     for (Character c : passwordField.getPassword()) {
                         password.append(c);
                     }
-                    System.out.println(password);
+
                     Person person = login(userNameField.getText(), password.toString());
                     if (person != null) {
                         JOptionPane.showMessageDialog(LoginWindow.this, "Login Successful!");
@@ -67,7 +70,7 @@ public class LoginWindow extends JFrame {
         createAccountButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Open the account creation window
+
                 new AccountCreationWindow(LoginWindow.this);
                 setVisible(false);
             }
@@ -77,14 +80,8 @@ public class LoginWindow extends JFrame {
     }
 
     private Person login(String userName, String password) throws IOException {
-        // Placeholder for actual login logic
-        // Replace with the actual check from the JSON file
-        //return findUserByCredentials("path/to/yourfile.json", userName, password) != null;
-        return JsonWriterReader.lookUpPerson(password, userName);
-    }
 
-    public static void main(String[] args) {
-        new LoginWindow();
+        return JsonWriterReader.lookUpPerson(password, userName);
     }
 }
 

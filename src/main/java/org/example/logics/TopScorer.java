@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logics;
 
 public class TopScorer {
     private String userName;

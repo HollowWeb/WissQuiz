@@ -1,9 +1,11 @@
-package org.example;
+package org.example.ui;
+import org.example.logics.JsonWriterReader;
+import org.example.logics.Person;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
 
 public class AccountCreationWindow extends JFrame {
 
@@ -35,16 +37,14 @@ public class AccountCreationWindow extends JFrame {
         add(userNameField);
         add(new JLabel("Password:"));
         add(passwordField);
-        add(new JLabel()); // Placeholder
+        add(new JLabel());
         add(createButton);
 
         // Action listener for create button
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Placeholder for account creation logic
-                // Here you would actually save the new user details to the JSON file
-                // For simplicity, just closing the window
+
                 if (!JsonWriterReader.isUsernameTaken(userNameField.getText())) {
                     if (isNotMissing()) {
                         Person newUser = new Person(

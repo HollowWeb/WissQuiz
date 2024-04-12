@@ -1,4 +1,7 @@
-package org.example;
+package org.example.ui;
+
+import org.example.logics.Person;
+import org.example.logics.Quiz;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,17 +22,18 @@ public class QuizSelectionWindow extends JFrame {
     private void initializeButtons(Person person) {
         // Define module names and corresponding file names
         String[][] modules = {
-                {"Modul 231", "Modul122"}, // Button Text, Button Modul
-                {"Modul 232", "modul12"},
-                {"Modul 233", "modul233"},
-                {"Modul 234", "modul234"},
-                {"Modul 235", "modul235"},
+                {"Modul 114", "Modul114"}, // Button Text, Button Modul
+                {"Modul 347", "Modul347"}, // <- wird gemacht
+                {"Modul 117", "Modul117"}, // noch zu machen
+                {"Modul 293", "Modul293"},
+                {"Modul 320", "Modul320"},
+
                 {"Modul 236", "modul236"}
         };
 
         for (String[] module : modules) {
             JButton button = new JButton(module[0]);
-
+            button.setFocusPainted(false);
             button.addActionListener(e -> openQuiz(module[1], person));
             add(button);
         }
@@ -44,9 +48,5 @@ public class QuizSelectionWindow extends JFrame {
         } catch (FileNotFoundException e) {
             JOptionPane.showMessageDialog(this, "Quiz file not found: " + quizFile, "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
-
-    public static void main(String[] args) {
-        //SwingUtilities.invokeLater(() -> new QuizSelectionWindow().setVisible(true));
     }
 }

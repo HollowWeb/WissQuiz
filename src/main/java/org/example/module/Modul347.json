@@ -1,0 +1,26 @@
+{
+  "name": "Modul 347",
+  "fragen": [
+    "Was sind die Unterschiede zwischen VMs und Docker?",
+    "Was ist ein Docker Image?",
+    "Was ist ein Docker Container?",
+    "Mit welchem Befehl starte ich einen Container im CMD?",
+    ""
+  ],
+  "antworten": [
+
+    "VMs virtualisieren das gesamte Betriebssystem, während Docker die Betriebssystemebene teilt.| Docker benötigt mehr Ressourcen als VMs| VMs und Docker nutzen den gleichen Mechanismus für die Netzwerkisolierung.|Docker und VMs sind identisch in ihrer Funktionsweise.",
+    "Eine Kopie einer laufenden Containerinstanz. |Docker-Images werden mit einem Dockerfile definiert.| Ein Backup-Tool für Daten.|Ein virtuelles Netzwerkgerät.",
+    "Eine dauerhafte Datenstruktur zur Speicherung von Images.|Eine isolierte Umgebung, die aus einem Docker Image gestartet wird.|Ein Netzwerkdienst bereitgestellt von Docker.|Ein Tool zur Virtualisierung von Hardware.",
+    "docker commit|docker pull|docker run|docker build",
+    ""
+
+  ],
+  "richtigeAntworten": [
+    "VMs virtualisieren das gesamte Betriebssystem, während Docker die Betriebssystemebene teilt.",
+    "Docker-Images werden mit einem Dockerfile definiert.",
+    "Eine isolierte Umgebung, die aus einem Docker Image gestartet wird.",
+    "docker run",
+    ""
+  ]
+}

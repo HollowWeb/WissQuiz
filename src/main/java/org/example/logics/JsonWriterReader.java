@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logics;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,13 +14,13 @@ public class JsonWriterReader {
 
     public static void writeToJsonFile(Person person) {
         try {
-            File file = new File("users.json");
+            File file = new File("src/main/resources/users.json");
             JSONArray jsonArray;
 
             // Check if the file exists
             if (file.exists() && !file.isDirectory()) {
                 // Read the existing content
-                String content = new String(Files.readAllBytes(Paths.get("users.json")));
+                String content = new String(Files.readAllBytes(Paths.get("src/main/resources/users.json")));
                 jsonArray = new JSONArray(content);
             } else {
                 // Create a new JSON array if the file doesn't exist
@@ -42,52 +42,22 @@ public class JsonWriterReader {
                 }
             }
 
-            // If the user does not exist, add as a new entry
+            // If the user does not exist, add new user
             if (!userExists) {
                 jsonArray.put(newUser);
             }
 
-            // Write the updated JSON array back to the file
-            try (FileWriter fileWriter = new FileWriter("users.json")) {
+            // Write the updated JSON back to the file
+            try (FileWriter fileWriter = new FileWriter("src/main/resources/users.json")) {
                 fileWriter.write(jsonArray.toString(4)); // Indentation for readability
             }
 
-            System.out.println("Entry added or updated successfully.");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-/*
-    public static void writeToJsonFile(Person person){
-        // methode to write a persons scores to a jsonFile With all there info
-        try {
-            File file = new File("users.json");
-            JSONArray jsonArray;
 
-            // Check if the file exists
-            if (file.exists() && !file.isDirectory()) {
-                // Read the existing content
-                String content = new String(Files.readAllBytes(Paths.get("users.json")));
-                jsonArray = new JSONArray(content);
-            } else {
-                // Create a new JSON array if the file doesn't exist
-                jsonArray = new JSONArray();
-            }
-
-            // Create a new JSON object and populate it with data
-            JSONObject newUser = getJsonObject(person);
-            // Add the new entry to the JSON array
-            jsonArray.put(newUser);
-            // Write the updated JSON array back to the file
-            try (FileWriter fileWriter = new FileWriter("users.json")) {
-                fileWriter.write(jsonArray.toString(4)); // Indentation for readability
-            }
-
-            System.out.println("New entry added successfully.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 
     private static JSONObject getJsonObject(Person person) {
         JSONObject newUser = new JSONObject();
@@ -104,21 +74,21 @@ public class JsonWriterReader {
 
     public static Person lookUpPerson(String password, String userName) throws IOException {
         try {
-            File file = new File("users.json");
+            File file = new File("src/main/resources/users.json");
 
             if (!file.exists() || file.isDirectory()) {
                 return null;
             }
-            System.out.println("test3");
-            String fileContent = new String(Files.readAllBytes(Paths.get("users.json")));
-            System.out.println(fileContent);
+
+            String fileContent = new String(Files.readAllBytes(Paths.get("src/main/resources/users.json")));
+
             JSONArray jsonArray = new JSONArray(fileContent);
 
             for (int i = 0; i < jsonArray.length(); i++){
                 JSONObject user = jsonArray.getJSONObject(i);
-                System.out.println("test2");
+
                 if (Objects.equals(user.getString("userName"), userName) && Objects.equals(user.getString("password"), password)){
-                    System.out.println("test1");
+
                     HashMap<String, Integer> scores = new HashMap<>();
                     JSONObject userScores = user.getJSONObject("scores");
 
@@ -136,18 +106,18 @@ public class JsonWriterReader {
                 }
             }
         } catch (JSONException e) {e.printStackTrace();}
-        System.out.println("test10");
+
         return null;
     }
 
     public static boolean isUsernameTaken(String username) {
-        String filePath = "users.json";
+        String filePath = "src/main/resources/users.json";
         try {
             File file = new File(filePath);
 
             // Check if the file exists
             if (!file.exists() || file.isDirectory()) {
-                // File does not exist or is not a file, so the username cannot be taken
+
                 return false;
             }
 
@@ -165,9 +135,8 @@ public class JsonWriterReader {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            // Handle exceptions appropriately
         }
-        // Username not found, so it is not taken
+        // Username not found
         return false;
     }
 

@@ -1,0 +1,27 @@
+{
+  "name": "Modul 117",
+  "fragen": [
+    "Wie viele OSI-Referenzschichten gibt es?",
+    "Was ist eine Subnetzmaske?",
+    "Was genau macht der Befehl Ping?",
+    "Was ist ein Gateway?",
+    "Was macht der Befehl Ipconfig?",
+    ""
+  ],
+  "antworten": [
+    "5 Schichten|7 Schichten|9 Schichten|6 Schichten",
+    "Ein Gerät, das Netzwerkpakete filtert|Eine Adresse, die den Netzwerkteil der IP-Adresse identifiziert|Ein Protokoll zur Datenübertragung|Ein Code zur Verschlüsselung von Netzwerkdaten",
+    "Er misst die Übertragungsgeschwindigkeit im Netzwerk|Er konfiguriert Netzwerkeinstellungen|Er überprüft die Verbindung zu einem anderen Netzwerkgerät durch Senden von Paketen|Er erstellt eine Liste aller verbundenen Geräte im Netzwerk",
+    "Ein Gerät, das den Datenverkehr innerhalb eines Netzwerks steuert|Ein Protokoll zur sicheren Datenübertragung|Ein Netzwerkknoten, der als Zugangspunkt zu einem anderen Netzwerk dient|Eine Software zur Netzwerkverwaltung",
+    "Er überprüft die physische Adresse des Netzwerkadapters.|Er zeigt die IP-Konfiguration und andere Netzwerkinformationen an.|Er konfiguriert die Sicherheitseinstellungen des Netzwerks.|Er misst die Internetgeschwindigkeit",
+    ""
+  ],
+  "richtigeAntworten": [
+    "7 Schichten",
+    "Eine Adresse, die den Netzwerkteil der IP-Adresse identifiziert",
+    "Er überprüft die Verbindung zu einem anderen Netzwerkgerät durch Senden von Paketen",
+    "Ein Netzwerkknoten, der als Zugangspunkt zu einem anderen Netzwerk dient",
+    "Er zeigt die IP-Konfiguration und andere Netzwerkinformationen an",
+    ""
+  ]
+}

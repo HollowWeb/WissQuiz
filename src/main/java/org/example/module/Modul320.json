@@ -1,0 +1,42 @@
+{
+  "name": "Modul 320",
+  "fragen": [
+    "Erkläre, was 'public static void main(String[] args)' in einem Java-Programm bedeutet.",
+    "Wie definiert man eine Variable in Java und weist ihr einen Wert zu?",
+    "Was passiert, wenn man versucht, auf eine Variable zuzugreifen, die nicht initialisiert wurde?",
+    "Wie kann man in Java eine einfache Schleife mit 'for' schreiben, die von 1 bis 10 zählt?",
+    "Was ist der Unterschied zwischen '==' und 'equals()' in Java?",
+    "Was bewirkt das Schlüsselwort 'final' bei der Deklaration einer Variablen?",
+    "Was sind primitive Datentypen in Java?",
+    "Warum und wie verwendet man Kommentare im Code?",
+    "Wie erstellt man ein einfaches Array in Java und greift auf das erste Element zu?",
+    "Was ist der Unterschied zwischen lokalen Variablen und Instanzvariablen?",
+    ""
+  ],
+  "antworten": [
+    "Es definiert die Hauptmethode, den Einstiegspunkt für jede ausführbare Java-Anwendung.|Es ist ein Kommentar.|Es ist eine spezielle Anweisung, die Java-Programme schneller macht.|Es ist eine Konfigurationseinstellung für den Java-Compiler.",
+    "int zahl = 5;|String zahl = '5';|int zahl; zahl == 5;|define zahl = 5;",
+    "Das Programm wird einen Compilerfehler ausgeben.|Das Programm wird normal ausgeführt, die Variable hat den Wert null.|Es wird eine RuntimeException geworfen.|Das Programm wird eine Fehlermeldung während der Laufzeit anzeigen.",
+    "for (int i = 1; i <= 10; i++) { System.out.println(i); }|for (int i = 1; i < 10; i++) { System.out.println(i); }|for (int i = 0; i <= 10; i++) { System.out.println(i + 1); }|Alle oben genannten Schleifen zählen von 1 bis 10.",
+    "'==' prüft auf Gleichheit der Referenzen, 'equals()' auf Gleichheit der Werte.|'==' ist schneller als 'equals()'.|'==' kann für alle Objekte verwendet werden, 'equals()' nur für Zeichenketten.|Es gibt keinen Unterschied, beide sind gleich.",
+    "Die Variable kann nach der Initialisierung nicht mehr verändert werden.|Die Variable wird automatisch als 'null' initialisiert.|Die Variable wird schneller.|Die Variable kann mehrfach initialisiert werden.",
+    "int, double, char, boolean sind Beispiele für primitive Datentypen, die direkt Werte speichern und nicht Objekte sind.|Sie sind spezielle Klassen in Java.|Es sind komplexe Datentypen, die spezielle Methoden enthalten.|Sie sind veraltet und sollten vermieden werden.",
+    "Kommentare helfen, den Code zu erklären und sind für die Ausführung wichtig.|Kommentare werden vom Java-Compiler ignoriert, sind aber nützlich für die Dokumentation des Codes.|Kommentare verlangsamen die Ausführung des Programms.|Kommentare können nur am Anfang des Codes stehen.",
+    "int[] meinArray = {1, 2, 3}; System.out.println(meinArray[0]);|int meinArray[] = new int[3]; meinArray[0] = 1; System.out.println(meinArray[0]);|Beide oben genannten sind korrekt.|Arrays in Java können nicht einfach erstellt werden.",
+    "Lokale Variablen sind innerhalb von Methoden definiert und nur dort gültig;|Lokale Variablen müssen bei der Deklaration initialisiert werden, Instanzvariablen nicht.|Instanzvariablen können statisch sein, lokale Variablen nicht.|Es gibt keinen Unterschied, beide Arten von Variablen sind identisch.",
+    ""
+  ],
+  "richtigeAntworten": [
+    "Es definiert die Hauptmethode, den Einstiegspunkt für jede ausführbare Java-Anwendung.",
+    "int zahl = 5;",
+    "Das Programm wird eine Fehlermeldung während der Laufzeit anzeigen.",
+    "for (int i = 1; i <= 10; i++) { System.out.println(i); }",
+    "'==' prüft auf Gleichheit der Referenzen, 'equals()' auf Gleichheit der Werte.",
+    "Die Variable kann nach der Initialisierung nicht mehr verändert werden.",
+    "int, double, char, boolean sind Beispiele für primitive Datentypen, die direkt Werte speichern und nicht Objekte sind.",
+    "Kommentare werden vom Java-Compiler ignoriert, sind aber nützlich für die Dokumentation des Codes.",
+    "Beide oben genannten sind korrekt.",
+    "Lokale Variablen sind innerhalb von Methoden definiert und nur dort gültig; Instanzvariablen sind Teil von Objekten und über verschiedene Methoden hinweg gültig.",
+    ""
+  ]
+}

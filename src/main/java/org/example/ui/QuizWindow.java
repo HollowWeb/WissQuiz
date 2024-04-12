@@ -1,10 +1,16 @@
-package org.example;
+package org.example.ui;
 
 
+
+import org.example.logics.JsonWriterReader;
+import org.example.logics.Person;
+import org.example.logics.Quiz;
+import org.example.logics.QuizBrain;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.List;
 
 public class QuizWindow extends JFrame {
@@ -25,7 +31,8 @@ public class QuizWindow extends JFrame {
 
     private void initializeUI() {
         setTitle("Quiz App");
-        setSize(600, 600);
+        setSize(1080, 920);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
 
@@ -39,6 +46,9 @@ public class QuizWindow extends JFrame {
         for (int i = 0; i < answerButtons.length; i++) {
             final int idx = i;
             answerButtons[i] = new JButton("Answer " + (i + 1));
+            answerButtons[i].setFocusPainted(false);
+
+            answerButtons[i].setFont(new Font("Serif", Font.PLAIN, 14));
             answerButtons[i].addActionListener(this::answerButtonClicked);
             answersPanel.add(answerButtons[i]);
         }
@@ -52,7 +62,7 @@ public class QuizWindow extends JFrame {
 
     private void loadQuestion() {
         if (QuizBrain.hasQuestions(quiz)) {
-            System.out.println("load");
+
             int questionNumber = quiz.getQuestionNumber();
             String question = quiz.getFrage(questionNumber);
             List<String> answers = quiz.getAntwort(questionNumber);
@@ -69,8 +79,7 @@ public class QuizWindow extends JFrame {
             JButton clickedButton = (JButton) e.getSource();
             String selectedAnswer = clickedButton.getText();
             String correctAnswer = quiz.getRichtigeAntwort(quiz.getQuestionNumber());
-            System.out.println(selectedAnswer);
-            System.out.println(correctAnswer);
+
 
             if (selectedAnswer.equals(correctAnswer)) {
                 quiz.addScore();
@@ -81,10 +90,12 @@ public class QuizWindow extends JFrame {
             loadQuestion();
             updateScoreLabel();
             if (!(quiz.getQuestionNumber() < quiz.getNumberOfQuestions())){
+                setVisible(false);
                 JOptionPane.showMessageDialog(this, "Quiz finished! Your score: " + quiz.getScore());
                 person.setScore(quiz.getModul(), quiz.getScore());
+
                 JsonWriterReader.writeToJsonFile(person);
-                setVisible(false);
+
                 dispose();
                 this.quizSelectionWindow.setVisible(true);
             }
@@ -96,12 +107,6 @@ public class QuizWindow extends JFrame {
     private void updateScoreLabel() {
         scoreLabel.setText("Score: " + quiz.getScore());
     }
-/*
-    public static void main(String[] args) throws FileNotFoundException {
-        // Example usage
 
-        Quiz quiz = new Quiz("Modul122.json"); // moduleName should be replaced with actual module name
-        //SwingUtilities.invokeLater(() -> new QuizWindow(quiz, QuizSelectionWindow()).setVisible(true));
-    }*/
 }
 

@@ -1,7 +1,9 @@
-package org.example;
+package org.example.ui;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+
+import org.example.logics.TopScorer;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.nio.file.Files;
@@ -16,7 +18,7 @@ public class TopScoresWindow extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Assuming you have a method that returns the sorted list of top scorers
+
         List<TopScorer> topScorers = getTopScorers();
 
         // Display top scorers
@@ -33,8 +35,7 @@ public class TopScoresWindow extends JFrame {
     }
 
     private List<TopScorer> getTopScorers() {
-        // Your implementation here: read the JSON file, calculate scores, and sort them
-        // For demonstration, returning an empty list
+
         List<TopScorer> users = new ArrayList<>();
         try {
             // Read the JSON file into a String
@@ -60,12 +61,12 @@ public class TopScoresWindow extends JFrame {
             // Sort the list by total score in descending order
             users.sort(Comparator.comparingInt(TopScorer::getTotalScore).reversed());
 
-            // Return the top 10 scorers, or less if there aren't 10 users
+            // Return the top 10 scorers
             return users.subList(0, Math.min(users.size(), 10));
 
         } catch (Exception e) {
             e.printStackTrace();
-            return null; // Or handle the error as appropriate
+            return null;
         }
     }
 }

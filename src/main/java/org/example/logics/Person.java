@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logics;
 
 import java.util.HashMap;
 
@@ -21,7 +21,6 @@ public class Person {
 
     }
 
-
     public HashMap<String, Integer> getScores() {return scores;}
     public String getEmail() {return email;}
     public String getFirstName() {return firstName;}
@@ -30,19 +29,20 @@ public class Person {
     public String getUserName() {return userName;}
 
     public void setScore(String module, int score){
-        scores.put(module, score);
+        if (this.scores.get(module) < score){
+            this.scores.put(module, score);
+        }
     }
 
     private HashMap<String, Integer> setDefaultScores(HashMap <String, Integer> scores){
         if (scores == null) {
             HashMap<String, Integer> defScores = new HashMap<>();
-            defScores.put("Modul122", 0);
-            defScores.put("Modul123", 0);
-            defScores.put("Modul124", 0);
-            defScores.put("Modul125", 0);
-            defScores.put("Modul126", 0);
+            defScores.put("Modul347", 0);
+            defScores.put("Modul114", 0);
+            defScores.put("Modul117", 0);
+            defScores.put("Modul293", 0);
+            defScores.put("Modul320", 0);
             defScores.put("Modul127", 0);
-            defScores.put("Modul128", 0);
             return defScores;
         } else {return scores;}
     }
@@ -54,4 +54,6 @@ public class Person {
         }
         return totalScore;
     }
+
+
 }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.logics;
 
 import java.util.List;
 
@@ -12,7 +12,6 @@ public class Modul {
 
 
     }
-
 
     public List<String> getFragen() {
         return fragen;

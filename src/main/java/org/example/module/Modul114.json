@@ -1,0 +1,42 @@
+{
+  "name": "Zahlensysteme und Codierung",
+  "fragen": [
+    "Was ist das Hauptmerkmal eines positionsbasierten Zahlensystems?",
+    "Welches Zahlensystem wird vorrangig in der Informatik für die Darstellung von Daten verwendet?",
+    "Warum wird das Hexadezimal-System häufig in der Informatik verwendet?",
+    "Was versteht man unter der Hamming-Distanz?",
+    "Wofür wird ein EAN-13-Code verwendet?",
+    "Was beschreibt das Unicode-System?",
+    "Was ist eine Eigenschaft von QR-Codes im Vergleich zu herkömmlichen Strichcodes?",
+    "Warum ist UTF-8 besonders für das Web geeignet?",
+    "Welche Eigenschaften eines Zahlensystems machen es besonders teilbar?",
+    "Welches Zahlensystem verwendet die Informatik, um Farbinformationen in Bilddateien zu speichern?",
+    ""
+  ],
+  "antworten": [
+    "Jedes Symbol steht immer für den gleichen Wert|Die Position eines Symbols bestimmt seinen Wert|Es gibt nur eine einzige Ziffer|Die Zahlen werden immer von rechts nach links gelesen",
+    "Dezimal|Duodezimal|Binär|Hexadezimal",
+    "Es ist einfacher zu verstehen als das Binärsystem|Es verkürzt die Darstellung binärer Zahlenfolgen|Es basiert auf dem menschlichen Zehnfingersystem|Es hat eine Basis von 100",
+    "Die Anzahl der gleichen Bits in zwei Binärwörtern|Die Distanz zwischen zwei Speichermodulen|Die Anzahl der Bits, die sich in zwei Binärwörtern unterscheiden|Die maximale Länge eines Codes",
+    "Zur Kennzeichnung von Webseiten|Zur Identifikation von Handelsartikeln|Als Passwortschutz|Zur Darstellung von ASCII-Zeichen",
+    "Eine spezielle Codierung für Farben|Ein Zahlensystem basierend auf der Zahl 16|Einen internationalen Standard zur Kodierung von Schriftzeichen|Eine alte Form der Datenübertragung",
+    "Sie können nur in einer Richtung gescannt werden|Sie speichern ausschließlich numerische Informationen|Sie können weniger Daten speichern|Sie können mehr Informationen speichern und bieten Fehlerkorrektur",
+    "Es verwendet 32 Bits für jedes Zeichen|Es kodiert Zeichen in einer festen Byteanzahl|Es repräsentiert Zeichen mit einer variablen Byteanzahl und ist rückwärtskompatibel zu ASCII|Es wird ausschließlich für Videodaten verwendet",
+    "Eine hohe Anzahl an Stellen|Eine Basis, die durch viele Zahlen teilbar ist|Die ausschließliche Verwendung von Primzahlen|Das Fehlen von Nullen",
+    "Oktal|Hexadezimal|RGB-Farbmodell|Duodezimal",
+    ""
+  ],
+  "richtigeAntworten": [
+    "Die Position eines Symbols bestimmt seinen Wert",
+    "Binär",
+    "Es verkürzt die Darstellung binärer Zahlenfolgen",
+    "Die Anzahl der Bits, die sich in zwei Binärwörtern unterscheiden",
+    "Zur Identifikation von Handelsartikeln",
+    "Einen internationalen Standard zur Kodierung von Schriftzeichen",
+    "Sie können mehr Informationen speichern und bieten Fehlerkorrektur",
+    "Es repräsentiert Zeichen mit einer variablen Byteanzahl und ist rückwärtskompatibel zu ASCII",
+    "Eine Basis, die durch viele Zahlen teilbar ist",
+    "RGB-Farbmodell",
+    ""
+  ]
+}
