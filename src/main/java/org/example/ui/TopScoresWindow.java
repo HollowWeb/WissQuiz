@@ -39,7 +39,7 @@ public class TopScoresWindow extends JFrame {
         List<TopScorer> users = new ArrayList<>();
         try {
             // Read the JSON file into a String
-            String content = new String(Files.readAllBytes(Paths.get("users.json")));
+            String content = new String(Files.readAllBytes(Paths.get("src/main/resources/users.json")));
             JSONArray jsonArray = new JSONArray(content);
 
             // Process each user in the array

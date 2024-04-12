@@ -52,7 +52,7 @@ public class LoginWindow extends JFrame {
 
                     Person person = login(userNameField.getText(), password.toString());
                     if (person != null) {
-                        JOptionPane.showMessageDialog(LoginWindow.this, "Login Successful!");
+                        //JOptionPane.showMessageDialog(LoginWindow.this, "Login Successful!");
                         setVisible(false);
                         dispose();
 
